@@ -568,7 +568,6 @@ export default class GooglePlacesAutocomplete extends Component {
           onPress={() => this._onPress(rowData)}
           underlayColor={this.props.listUnderlayColor || "#c8c7cc"}
         >
-        <Text>Test</Text>
           <View style={[this.props.suppressDefaultStyles ? {} : defaultStyles.row, this.props.styles.row, rowData.isPredefinedPlace ? this.props.styles.specialItemRow : {}]}>
             {this._renderRowData(rowData)}
             {this._renderLoader(rowData)}
@@ -701,6 +700,7 @@ export default class GooglePlacesAutocomplete extends Component {
             {this._renderRightButton()}
           </View>
         }
+        <Text style={{ color: 'red'}}>Test</Text>
         {this._getFlatList()}
         {this.props.children}
       </View>
