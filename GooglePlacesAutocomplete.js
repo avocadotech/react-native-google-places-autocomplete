@@ -646,9 +646,7 @@ export default class GooglePlacesAutocomplete extends Component {
   }
 
   _getFlatList = () => {
-    const keyGenerator = () => (
-      Math.random().toString(36).substr(2, 10)
-    );
+    const keyGenerator = item => `${item.id}_${item.place_id || 'manual'}`;
 
     if ((this.state.text !== '' || this.props.predefinedPlaces.length || this.props.currentLocation === true) && this.state.listViewDisplayed === true) {
       return (
