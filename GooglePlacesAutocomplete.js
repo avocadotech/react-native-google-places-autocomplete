@@ -648,7 +648,7 @@ export default class GooglePlacesAutocomplete extends Component {
   _getFlatList = () => {
     const keyGenerator = item => `${item.id}_${item.place_id || 'manual'}`;
 
-    if ((this.state.text !== '' || this.props.predefinedPlaces.length || this.props.currentLocation === true) && this.state.listViewDisplayed === true) {
+    if ((this.state.text !== '' || this.props.predefinedPlaces.length || this.props.currentLocation === true)) {
       return (
         <FlatList
           style={[this.props.suppressDefaultStyles ? {} : defaultStyles.listView, this.props.styles.listView]}
