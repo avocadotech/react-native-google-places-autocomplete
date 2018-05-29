@@ -698,7 +698,6 @@ export default class GooglePlacesAutocomplete extends Component {
             {this._renderRightButton()}
           </View>
         }
-        <Text style={{ color: 'red'}}>Test</Text>
         {this._getFlatList()}
         {this.props.children}
       </View>
